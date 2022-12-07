@@ -39,7 +39,7 @@ class HeroDetailsViewController: UIViewController {
     
     private func showSpinner(in view: UIView) {
         spinnerView = UIActivityIndicatorView (style: .large)
-        spinnerView.color = .gray
+        spinnerView.color = .white
         spinnerView.startAnimating()
         spinnerView.center = heroImageView.center
         spinnerView.hidesWhenStopped = true

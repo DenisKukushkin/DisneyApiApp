@@ -58,11 +58,22 @@
                             <outlet property="delegate" destination="qPc-fg-Mc3" id="3vv-Vn-383"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Disney Heroes" id="Rka-3x-Sb1"/>
+                    <navigationItem key="navigationItem" title="Disney Heroes" id="Rka-3x-Sb1">
+                        <barButtonItem key="leftBarButtonItem" title="prev" id="5lN-M8-der">
+                            <connections>
+                                <action selector="upadtaData:" destination="qPc-fg-Mc3" id="ij0-8P-Xv5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="next" id="wrY-Ye-hRq">
+                            <connections>
+                                <action selector="upadtaData:" destination="qPc-fg-Mc3" id="05r-KD-ZZj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr3-sq-KvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-69.230769230769226" y="110.90047393364928"/>
+            <point key="canvasLocation" x="-74" y="111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nSu-gV-fnw">
@@ -71,6 +82,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="CsU-el-Mu8">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="qPc-fg-Mc3" kind="relationship" relationship="rootViewController" id="KH9-cu-9Je"/>
@@ -95,8 +107,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePH-z9-RoL">
-                                <rect key="frame" x="20" y="453" width="350" height="28.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="20" y="453" width="350" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
