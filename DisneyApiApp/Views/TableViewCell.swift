@@ -23,9 +23,7 @@ class TableViewCell: UITableViewCell {
     func configure(with disneyHero: DisneyHero?) {
         heroNameLabel.text = disneyHero?.name
         DispatchQueue.global().async {
-            guard let stringURL = disneyHero?.imageUrl else { return }
-            guard let imageURL = URL(string: stringURL) else { return }
-            guard let imageData = try? Data (contentsOf: imageURL) else { return }
+            guard let imageData = ImageManager.shared.fetchImage(from: disneyHero?.imageUrl) else { return }
             DispatchQueue.main.async {
                 self.heroImageView.image = UIImage(data: imageData)
             }
